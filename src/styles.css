@@ -1,1 +1,4 @@
 /* You can add global styles to this file, and also import other style files */
+.featurette-divider {
+  margin: 10px 0; /* Space out the Bootstrap <hr> more */
+}
