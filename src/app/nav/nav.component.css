@@ -1,0 +1,17 @@
+.nav-link.active {
+	background-color: #080808;
+	color: #fff;
+}
+
+li:hover{
+	background: red;
+}
+  
+.navbar-nav {
+	--bs-nav-link-hover-color: #fff;
+}
+
+li {
+	width: 130px;
+	text-align: center;
+}
