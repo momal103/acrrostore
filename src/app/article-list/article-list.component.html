@@ -1,0 +1,16 @@
+<div class="container">
+  <hr class="featurette-divider">
+  <h1 class="text-center">TOP VENTES</h1>
+  <hr class="featurette-divider">
+  <div class="row">
+    <div class="card col-lg-6 col-md-6 col-sm-6 text-center" *ngFor="let article of articles" >
+        <img class="card-img-top" src="{{'../assets/img/Marketing/market' + article.id + '.png'}}">
+				<div class="card-body">
+					<h4 class="card-title">{{article.title}}</h4>
+					<p class="card-text">{{article.description}}</p>
+					<a href="{{article.url}}" class="btn btn-primary">Voir sur Amazon</a>
+				</div>
+    </div>
+  </div>
+  <hr class="featurette-divider">
+</div>
