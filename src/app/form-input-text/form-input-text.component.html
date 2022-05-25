@@ -1,6 +1,9 @@
 
-    <div class="md-form mb-0">
+    <div class="md-form mb-0" *ngIf="contactForm" [formGroup]="contactForm" >
        <label for="{{id}}" >{{label}}</label>
-        <input type="text" id="{{id}}" name="{{id}}" class="form-control" *ngIf="!textarea">
-        <textarea type="text" id="{{id}}" name="{{id}}" rows="2" class="form-control md-textarea" *ngIf="textarea"></textarea>
+        <input type="text" id="{{id}}" name="{{id}}" formControlName="{{fCtrlName}}" class="form-control" *ngIf="!textarea">
+        <textarea type="text" id="{{id}}" name="{{id}}" formControlName="{{fCtrlName}}" rows="2" class="form-control md-textarea" *ngIf="textarea"></textarea>
     </div>
+    <div *ngIf="contactForm.controls['contactFormName'].invalid">
+           Please enter username
+         </div>

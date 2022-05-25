@@ -1,5 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule  } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { FooterComponent } from './footer/footer.component';
@@ -11,6 +14,7 @@ import { GarantieComponent } from './garantie/garantie.component';
 import { ServiceClientComponent } from './service-client/service-client.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormInputTextComponent } from './form-input-text/form-input-text.component';
+import { ConnectionService } from './connection.service';
 
 @NgModule({
   declarations: [
@@ -26,9 +30,12 @@ import { FormInputTextComponent } from './form-input-text/form-input-text.compon
   ],
   imports: [
     BrowserModule,
-    NgbModule
+    NgbModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    FormsModule 
   ],
-  providers: [NavComponent],
+  providers: [NavComponent, ConnectionService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

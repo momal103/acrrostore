@@ -11,21 +11,14 @@
     <p class="text-center w-responsive mx-auto mb-5">Nous sommes honorés que vous ayez choisi de faire confiance à notre produit et à notre entreprise. Pour protéger votre investissement, nous demandons à tous nos clients de remplir le formulaire de garantie de 2 année ci-dessous. Si vous devez remplacer votre produit en raison de défauts, cet enregistrement contribuera à accélérer le processus d’échange et / ou de retour de produits.</p>
         <!--Grid column-->
         <div class="col-md-12 mb-md-0 mb-5">
-            <form id="contact-form" name="contact-form">
+            <form class="text-center border border-light p-5"  (ngSubmit)="onSubmit()" >
                 <div class="row">
-                  <app-form-input-text id="name" label="Nom" class="col-md-6"></app-form-input-text>
-                  <app-form-input-text id="email" label="E-mail" class="col-md-6"></app-form-input-text>
+                  <app-form-input-text *ngIf="contactForm" [contactForm]="contactForm" id="name" label="Nom" class="col-md-6" fCtrlName="contactFormName" ></app-form-input-text>
+                  <app-form-input-text *ngIf="contactForm" [contactForm]="contactForm" id="email" label="E-mail" class="col-md-6" fCtrlName="contactFormEmail" ></app-form-input-text>
                 </div>
                 <div class="row">
-                    <div class="col-md-12">
-                        <div class="md-form mb-0">
-							              <label for="subject" class="">N° de commande</label>
-                            <input type="text" id="subject" name="subject" class="form-control">
-                        </div>
-                    </div>
+                  <app-form-input-text id="subject" label="N° de commande" class="col-md-12"></app-form-input-text>
                 </div>
-                <!--Grid row-->
-                <!--Grid row-->
                 <div class="row">
                     <!--Grid column-->
                     <div class="col-md-12">
@@ -40,11 +33,11 @@
                         </div>
                     </div>
                 </div>
-                <!--Grid row-->
+                <div class="text-center text-md-left">
+                   <button class="btn btn-primary" type="submit">Envoyer</button>
+                </div>
             </form>
-            <div class="text-center text-md-left">
-               <a class="btn btn-primary">Envoyer</a>
-            </div>
+
             <div class="status" id="status"></div>
         </div>
         <!--Grid column-->
