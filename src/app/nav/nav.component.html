@@ -1,8 +1,8 @@
 <nav class="navbar navbar-expand-lg">
   <div class="container">
-    <a class="navbar-brand" href="#">
-  		<img class="navbar-toggler" src="..\assets\img\logo-xs.png"/>
-      <img class="collapse navbar-collapse" src="..\assets\img\logo50.png" />
+    <a class="navbar-brand" (click)="SetActiveItem('ACCUEIL')">
+  		  <img class="navbar-toggler" src="..\assets\img\logo-xs.png"/>
+		    <img class="collapse navbar-collapse" src="..\assets\img\logo50.png" />
 	  </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -10,7 +10,7 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item" *ngFor="let navItem of navItems">
-          <a class="nav-link" href="#" [ngClass]="{'active': activeItem == navItem.name}" (click)="activeItem = navItem.name">{{navItem.name}}</a>
+          <a class="nav-link" [ngClass]="{'active': activeItem == navItem.name}" (click)=SetActiveItem(navItem.name)>{{navItem.name}}</a>
         </li>
       </ul>
     </div>

@@ -1,1 +1,35 @@
-<p>service-client works!</p>
+<div class="container" [ngbCollapse]="activeItem != 'SERVICE CLIENT'">
+	<hr class="featurette-divider">
+	 <h1 class="text-center">SERVICE CLIENT</h1>
+	 <hr class="featurette-divider">
+	 <div class="row">
+					 <!--Section: Contact v.2-->
+<section class="mb-4">
+	 <!--Section heading-->
+	 		<h2 class="h1-responsive font-weight-bold text-center my-4">Contactez-nous</h2>
+	 <!--Section description-->
+	 		<p class="text-center w-responsive mx-auto mb-5">Avez-vous des questions? N'hésitez pas à nous contacter directement. Notre équipe reviendra vers vous rapidement pour vous aider.</p>
+			 <div class="row">
+					 <div class="col-md-12 mb-md-0 mb-5">
+							 <form id="contact-form" name="contact-form">
+									 <div class="row">
+											 <app-form-input-text id="name" label="Nom" class="col-md-6"></app-form-input-text>
+											 <app-form-input-text id="email" label="E-mail" class="col-md-6"></app-form-input-text>
+									 </div>
+									 <div class="row">
+											 <app-form-input-text id="subject" label="Sujet" class="col-md-12"></app-form-input-text>
+									 </div>
+									 <div class="row">
+											<app-form-input-text id="message" label="Message" class="col-md-12" [textarea]="true"></app-form-input-text>
+									 </div>
+							 </form>
+							 <div class="text-center text-md-left">
+									<a class="btn btn-primary">Envoyer</a>
+							 </div>
+							 <div class="status"></div>
+					 </div>
+			 </div>
+</section>
+</div>
+<hr class="featurette-divider">
+</div>

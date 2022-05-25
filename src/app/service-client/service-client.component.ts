@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-service-client',
@@ -6,7 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./service-client.component.css']
 })
 export class ServiceClientComponent implements OnInit {
-
+ 
+	@Input() activeItem = '';
+	
   constructor() { }
 
   ngOnInit(): void {

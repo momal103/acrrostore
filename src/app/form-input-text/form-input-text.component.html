@@ -1,0 +1,6 @@
+
+    <div class="md-form mb-0">
+       <label for="{{id}}" >{{label}}</label>
+        <input type="text" id="{{id}}" name="{{id}}" class="form-control" *ngIf="!textarea">
+        <textarea type="text" id="{{id}}" name="{{id}}" rows="2" class="form-control md-textarea" *ngIf="textarea"></textarea>
+    </div>

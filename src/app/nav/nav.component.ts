@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 import { navItems } from '../nav-items';
 
@@ -10,7 +10,14 @@ import { navItems } from '../nav-items';
 export class NavComponent implements OnInit {
   navItems = navItems;
   public activeItem : string = 'ACCUEIL';
-
+  
+  @Output() activeItemEmitter = new EventEmitter<string>();
+	
+	SetActiveItem(itemClicked: string){
+		this.activeItem = itemClicked;
+		this.activeItemEmitter.emit(this.activeItem);
+	}
+	
   constructor() { }
 
   ngOnInit(): void {

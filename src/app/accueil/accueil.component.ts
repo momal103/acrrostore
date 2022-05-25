@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-accueil',
@@ -6,10 +6,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./accueil.component.css']
 })
 export class AccueilComponent implements OnInit {
-
-  constructor() { }
+	
+	@Input() activeItem = '';
+    
+	
+	
+  constructor() { 
+		
+  }
+  
+  
 
   ngOnInit(): void {
+	  
   }
 
 }

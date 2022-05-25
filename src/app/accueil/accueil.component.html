@@ -1,2 +1,6 @@
-<app-jumbotron></app-jumbotron>
-<app-article-list></app-article-list>
+<div [ngbCollapse]="activeItem != 'ACCUEIL'">
+	<app-jumbotron></app-jumbotron>
+</div>
+<div [ngbCollapse]="activeItem != 'ACCUEIL'">
+	<app-article-list></app-article-list>
+</div>

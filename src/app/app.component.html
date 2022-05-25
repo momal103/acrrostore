@@ -1,6 +1,6 @@
-<app-nav></app-nav>
-<app-accueil></app-accueil>
-<app-garantie></app-garantie>
-<app-service-client></app-service-client>
+<app-nav (activeItemEmitter) = "SetActiveItem($event)"></app-nav>
+<app-accueil [activeItem]=activeItem></app-accueil>
+<app-garantie [activeItem]=activeItem></app-garantie>
+<app-service-client [activeItem]=activeItem></app-service-client>
 <hr class="featurette-divider">
 <app-footer></app-footer>

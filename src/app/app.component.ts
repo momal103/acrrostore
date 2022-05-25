@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Acrrostore';
+  public activeItem = 'ACCUEIL';
+  
+  SetActiveItem($event: string){
+		this.activeItem = $event;
+	}
 }
